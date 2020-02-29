@@ -21,7 +21,7 @@ class Neuron:
         Для получения результата происходит перемножение матрицы весов каждого из входящих значений
         на матрицу входных данных. К получившейся матрице добавляется значение смещения.
         """
-        return 1 if np.dot(self.weigth, np.array(x)) + self.bias > 0 else 0
+        return 1 if np.dot(self.weigth, x) + self.bias > 0 else 0
 
     def calc_with_threshold(self, x):
         """
@@ -31,4 +31,4 @@ class Neuron:
         на матрицу входных данных. Получившаяся матрица сравнивается со пограничным значением равным
         значению смещения взятым с противопложным знаком
         """
-        return 1 if np.dot(self.weigth, np.array(x)) > -self.bias else 0
+        return 1 if np.dot(self.weigth, x) > -self.bias else 0
