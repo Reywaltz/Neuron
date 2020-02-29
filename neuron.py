@@ -13,4 +13,4 @@ class Neuron:
         res = 0
         for i in x:
             res = res + (i * self.weigth)
-        return 1 if res > 1 else 0
+        return 1 if res > -self.bias else 0
